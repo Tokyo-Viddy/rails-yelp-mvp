@@ -1,0 +1,9 @@
+<div class="container">
+  <h1><%= @restaurant.name %></h1>
+  <h2>📍 <%= @restaurant.address %></h2>
+  <h2>🍲 <%= @restaurant.category %> cuisine</h2>
+  <p>📞 <%= @restaurant.phone_number if @restaurant.phone_number.present? %></p>
+  <p><%= @restaurant.review.content if @restaurant.review.present? %></p>
+  <p><%= link_to "Delete restaurant" %></p>
+  <p><%= link_to "Back to restaurant list", restaurants_path, class: 'btn btn-primary mt-2' %></p>
+</div>
